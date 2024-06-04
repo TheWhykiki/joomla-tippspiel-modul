@@ -1,0 +1,312 @@
+
+
+.uk-navbar-toggle:hover{
+    padding: 0 0;
+    color: #FFF !important;
+    letter-spacing: 1.8px;
+    background: rgba(4, 65, 2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.uk-navbar-toggle:focus{
+    padding: 0 0;
+    color: #FFF !important;
+    letter-spacing: 1.8px;
+    background: rgba(4, 65, 2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+}
+
+.uk-offcanvas-bar{
+    a{
+        color: #FFF !important;
+        text-decoration: none;
+        &:hover{
+            color: #FFF;
+        }
+    }
+    a.uk-button-primary{
+        &:hover{
+            width: 100%;
+            color: rgba(4, 65, 2, 1) !important;
+        }
+    }
+    color: #FFF !important;
+    background: rgba(4, 65, 2, 0.98) !important;
+}
+
+.uk-navbar-toggle{
+    padding: 0 0;
+    color: #FFF !important;
+    letter-spacing: 1.8px;
+    background: rgba(4, 65, 2, 0.65);
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+
+    @media (max-width: 768px) {
+        width: 50px;
+        height: 50px;
+        min-height: 50px !important;
+        margin-top: 10px;
+    }
+
+    @media (max-width: 480px) {
+    }
+}
+html{
+    /* overflow: hidden; */
+    height: 100vh;
+}
+
+.article_com_content{
+    overflow: hidden;
+    height: 100vh;
+    body{
+        background: url('../../../images/tippspiel-profil-bg.jpg') no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        overflow-y: scroll;
+        .tm-page{
+            height: calc(100vh - 100px);
+
+
+            .uk-navbar-primary{
+                background: none !important;
+
+            }
+            #tm-main{
+                background: none !important;
+                overflow-y: scroll !important;
+
+                .profile-edit{
+                    padding: 15px !important;
+                }
+            }
+        }
+
+
+    }
+
+    .tippsAbgeben{
+        overflow-y: hidden !important;
+    }
+}
+/***** User Profile *****/
+
+.profileCards{
+    padding: 15px;
+    height: 100%;
+    box-sizing: border-box;
+    legend{
+        font-size: 2.5rem;
+        color: #FFF;
+        margin-bottom: 15px;
+        font-family: "Bebas Neue";
+
+    }
+    label{
+        font-size: 1.5rem;
+        color: #FFF;
+        margin-bottom: 15px;
+        font-family: "Bebas Neue";
+    }
+}
+
+.profile_com_users{
+    overflow: hidden;
+    height: 100vh;
+    body{
+        background: url('../../../images/tippspiel-profil-bg.jpg') no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        overflow-y: scroll;
+        .tm-page{
+            height: calc(100vh - 100px);
+
+            .uk-navbar-primary{
+                background: none !important;
+
+            }
+            #tm-main{
+                background: none !important;
+
+                .profile-edit{
+                    padding: 15px !important;
+                }
+            }
+        }
+
+
+    }
+}
+._login_com_users{
+    overflow: hidden;
+    height: 100vh;
+    body{
+        background: url('../../../images/tippspiel-login.jpg') no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        overflow-y: scroll;
+        .tm-page{
+            height: calc(100vh - 100px);
+
+            .uk-navbar-primary{
+                background: none !important;
+
+            }
+            #tm-main{
+                background: none !important;
+            }
+        }
+
+        .com-users-login{
+            padding: 20px;
+        }
+    }
+}
+
+/** Registration ***/
+
+.saveContainer{
+    padding: 15px;
+    border-radius: 2px;
+}
+
+._registration_com_users{
+    overflow: hidden;
+    height: 100vh;
+    body{
+        background: url('../../../images/tippspiel-login.jpg') no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        overflow-y: scroll;
+        .tm-page{
+            height: calc(100vh - 100px);
+
+            .uk-navbar-primary{
+                background: none !important;
+
+            }
+            #tm-main{
+                background: none !important;
+            }
+        }
+
+        .com-users-login{
+            padding: 20px;
+        }
+
+        #color-pickers{
+            display: none;;
+        }
+
+        #svgContainer{
+            cursor: pointer;
+            width: calc(100% - 50px);
+            margin-left: 45px;
+            background: rgba(255, 255, 255, 0.6);
+            height: 309px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.form-control{
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 2px !important;
+    padding: 10px !important;
+    font-size: 1.5rem !important;
+    color: #333 !important;
+}
+
+.logout_article_com_content{
+    overflow: hidden;
+    height: 100vh;
+    body {
+        background: url('../../../images/tippspiel-logout.jpg') no-repeat center center;
+    }
+}
+.faqHelp_article_com_content{
+    overflow: hidden;
+    height: 100vh;
+    background-size: cover;
+
+    body {
+        background: url('../../../images/faq.jpg') no-repeat center center;
+        height: 100vh;
+        overflow-y: scroll;
+        .tm-page{
+            height: calc(100vh - 100px);
+
+            .uk-navbar-primary{
+                background: none !important;
+
+            }
+            #tm-main{
+                background: none !important;
+            }
+        }
+    }
+}
+.ergebnisse_category_com_contact{
+    overflow: hidden;
+    height: 100vh;
+    background-size: cover;
+
+    body {
+        background: url('../../../images/table.jpg') no-repeat center center;
+        height: 100vh;
+        overflow-y: scroll;
+        .tm-page{
+            height: calc(100vh - 100px);
+
+            .uk-navbar-primary{
+                background: none !important;
+
+            }
+            #tm-main{
+                background: none !important;
+            }
+        }
+
+        .com-contact-category__items{
+            padding: 15px;
+        }
+    }
+}
+
+.uk-section-default{
+    background: none;
+}
+
+.tendencySVG{
+    height: 15px;
+    width: auto;
+}
+
+.tableUserTipps{
+    text-align: center;
+    @media (max-width: 990px) {
+        td:nth-child(2){
+            font-size: 0.65rem;
+            font-weight: 600;
+            line-height: 0.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        td:nth-child(3){
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

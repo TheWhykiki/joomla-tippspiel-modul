@@ -10,13 +10,16 @@
     <description>MOD_TIPPSPIEL_FORM_XML_DESCRIPTION</description>
     <namespace path="src">Joomla\Module\TippspielForm</namespace>
     <files>
+        <folder module="mod_tippspiel_form">services</folder>
         <folder>language</folder>
-        <folder>services</folder>
         <folder>sql</folder>
         <folder>src</folder>
         <folder>tmpl</folder>
-        <filename module="mod_tippspiel_form">mod_tippspiel_form.php</filename>
     </files>
+
+    <media destination="mod_tippspiel_form" folder="media">
+        <folder>css</folder>
+    </media>
 
     <install folder="site">
         <sql>

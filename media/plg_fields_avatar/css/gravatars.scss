@@ -1,0 +1,46 @@
+#avatar{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    .img-container{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+#active-svg{
+    max-height: 200px;
+    overflow: hidden;
+    display: flex;
+}
+#svgContainer{
+    .inner{
+        background: rgba(255,255,255,0.9);
+        border: 1px solid rgba(0,0,0,0.3);
+    }
+}
+#color-pickers{
+    .inner{
+        background: rgba(255,255,255,0.9);
+        border: 1px solid rgba(0,0,0,0.3);
+        color: #333;
+        font-family: 'Bebas Neue';
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 100%;
+
+        label{
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

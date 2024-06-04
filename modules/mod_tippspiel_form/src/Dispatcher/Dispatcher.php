@@ -9,9 +9,13 @@
 
 namespace Joomla\Module\TippspielForm\Site\Dispatcher;
 
+use Joomla\CMS\Application\CMSApplicationInterface;
 use Joomla\CMS\Dispatcher\AbstractModuleDispatcher;
 use Joomla\CMS\Helper\HelperFactoryAwareInterface;
 use Joomla\CMS\Helper\HelperFactoryAwareTrait;
+use Joomla\CMS\Helper\ModuleHelper;
+use Joomla\Input\Input;
+use Joomla\Registry\Registry;
 
 /**
  * Dispatcher class for mod_tippspiel_form
@@ -22,19 +26,23 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
 {
     use HelperFactoryAwareTrait;
 
-    /**
-     * Returns the layout data.
-     *
-     * @return  array
-     *
-     * @since   1.0.0
-     */
-    protected function getLayoutData()
-    {
-        $data = parent::getLayoutData();
+	protected $module;
 
-        //$data['matches'] = $this->getHelperFactory()->getHelper('TippspielFormHelper')->getMatches();
+	protected $app;
 
-        return $data;
-    }
+	public function __construct(\stdClass $module, CMSApplicationInterface $app, Input $input)
+	{
+		$this->module = $module;
+		$this->app = $app;
+	}
+
+	public function dispatch()
+	{
+		$language = $this->app->getLanguage();
+		$language->load('mod_tippspiel_form');
+		$params = new Registry($this->module->params);
+
+		require ModuleHelper::getLayoutPath('mod_tippspiel_form');
+	}
+
 }

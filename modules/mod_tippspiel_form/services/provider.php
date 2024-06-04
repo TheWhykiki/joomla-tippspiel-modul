@@ -9,11 +9,12 @@
 
 defined('_JEXEC') or die;
 
-use Joomla\CMS\Extension\Service\Provider\HelperFactory;
-use Joomla\CMS\Extension\Service\Provider\Module;
-use Joomla\CMS\Extension\Service\Provider\ModuleDispatcherFactory;
+use Joomla\CMS\Extension\Service\Provider\Module as ModuleServiceProvider;
+use Joomla\CMS\Extension\Service\Provider\ModuleDispatcherFactory as ModuleDispatcherFactoryServiceProvider;
+use Joomla\CMS\Extension\Service\Provider\HelperFactory as HelperFactoryServiceProvider;
 use Joomla\DI\Container;
 use Joomla\DI\ServiceProviderInterface;
+
 
 /**
  * The module service provider.
@@ -33,8 +34,10 @@ return new class implements ServiceProviderInterface
      */
     public function register(Container $container)
     {
-        $container->registerServiceProvider(new ModuleDispatcherFactory('\\Joomla\\Module\\TippspielForm'));
-        $container->registerServiceProvider(new HelperFactory('\\Joomla\\Module\\TippspielForm\\Site\\Helper'));
-        $container->registerServiceProvider(new Module);
+
+	    $container->registerServiceProvider(new ModuleDispatcherFactoryServiceProvider('\\Joomla\\Module\\TippspielForm'));
+	    $container->registerServiceProvider(new HelperFactoryServiceProvider('\\Joomla\\Module\\TippspielForm\\Site\\Helper'));
+	    $container->registerServiceProvider(new ModuleServiceProvider());
+
     }
 };

@@ -1,0 +1,413 @@
+#tippspiel-form-container {
+    height: 100%;
+
+    .slider-inner-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: calc(100% -  100px);
+        background: rgb(19,65,2);
+        background: linear-gradient(0deg, rgba(4, 65, 2, 0.35) 30%, rgb(87, 117, 49) 110%);
+        border-radius: 8px;
+        padding: 15px;
+        padding-top: 100px;
+
+        .milky {
+            display: block;
+            color: #f4f4f4;
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8), 0px 0px 2px #fff !important;
+            text-align: center;
+        }
+
+        .vs{
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .group-stage {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 100%;
+            width: 100%;
+
+            @media (max-width: 990px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+                overflow-y: auto;
+                margin: 0;
+                padding: 0;
+            }
+
+            @media (max-width: 480px) {
+                grid-template-columns: 1fr;
+                overflow-y: auto;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .match {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.8);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                transition:  all 500ms ease-in-out;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 1);
+                    transition:  all 500ms ease-in-out;
+                }
+
+                .match-info {
+                    margin-bottom: 2px;
+
+                    .match-teams {
+                        font-family: "Bebas Neue";
+                        font-weight: 400;
+                        font-size: 1.5rem;
+                        margin-bottom: 0px;
+                        line-height: 100%;
+                    }
+                }
+
+                .match-date {
+                    font-size: 0.75em;
+                    color: #333;
+                }
+
+                .tips-score {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .finals {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 100%;
+            width: 100%;
+
+            @media (max-width: 990px) {
+            }
+
+            @media (max-width: 768px) {
+                overflow-y: auto;
+                margin: 0;
+                padding: 0;
+            }
+
+            @media (max-width: 480px) {
+                overflow-y: auto;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .match {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: #fafafa;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                }
+
+                @media (max-width: 768px) {
+                    input.score-input {
+                        width: 40px;
+                        height: 35px;
+                        font-size: 15px;
+                        text-align: center;
+                        border: 2px solid #007bff;
+                        border-radius: 5px;
+                        outline: none;
+                        margin: 5px;
+                        transition: border-color 0.3s, box-shadow 0.3s;
+                        -moz-appearance: textfield; /* Entfernt Pfeile in Firefox */
+                        background: linear-gradient(to bottom, #f0f8ff, #e6f7ff); /* Leichter Verlauf */
+                    }
+                }
+
+
+                .match-info {
+                    margin-bottom: 2px;
+
+                    .match-teams {
+                        font-weight: bold;
+                        font-size: 0.85rem;
+                        margin-bottom: 0px;
+                        line-height: 100%;
+                    }
+                }
+
+                .match-date {
+                    font-size: 0.65em;
+                    color: #666;
+                }
+
+                .tips-score {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .finalsContainer{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                        width: 100%;
+                    }
+
+                    .match-info{
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
+                    }
+
+                    .match-teams {
+                        @media (max-width: 768px) {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                        }
+                    }
+
+                    input.team-input {
+                        width: 300px;
+                        height: 35px;
+                        font-size: 16px;
+                        text-align: center;
+                        border: 2px solid #007bff;
+                        border-radius: 5px;
+                        outline: none;
+                        margin: 5px;
+                        transition: border-color 0.3s, box-shadow 0.3s;
+                        -moz-appearance: textfield;
+                        background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
+
+                        @media (max-width: 1200px) {
+                            width: 210px;
+                            height: 35px;
+                            font-size: 16px;
+                        }
+
+
+                        @media (max-width: 990px) {
+                            width: 180px;
+                            height: 35px;
+                            font-size: 15px;
+                        }
+
+                        @media (max-width: 768px) {
+                            width: 100%;
+                            height: 35px;
+                            font-size: 12px;
+                        }
+
+                        @media (max-width: 480px) {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btnFormSubmit{
+        top: 9px !important;
+        left: 20% !important;
+        border-radius: 8px !important;
+        background: white;
+        z-index: 999;
+        height: 70px;
+        width: 70px;
+        border: 1px solid rgba(82, 79, 79, .6);
+        position: absolute;
+        @media (max-width: 768px) {
+            height: 50px;
+            width: 50px;
+            padding: 0 !important;
+            margin: 0 !important;
+            right: 14% !important;
+            text-align: center !important;
+        }
+
+        svg{
+            height: 70%;
+            fill: green;
+        }
+    }
+
+    #btnFormSubmitResults{
+        top: 19px !important;
+        left: 11% !important;
+        border-radius: 8px !important;
+        background: white;
+        z-index: 999;
+        height: 70px;
+        width: 70px;
+        border: 1px solid rgba(82, 79, 79, .6);
+        position: absolute;
+        @media (max-width: 768px) {
+            height: 50px;
+            width: 50px;
+            padding: 0 !important;
+            margin: 0 !important;
+            right: 14% !important;
+            text-align: center !important;
+        }
+
+        svg{
+            height: 70%;
+            fill: green;
+        }
+    }
+}
+
+#final, #quarterfinals, #semi-finals{
+    justify-content: flex-start !important;
+    padding-top: 150px;
+}
+
+input.score-input {
+    width: 50px;
+    height: 35px;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+    margin: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    -moz-appearance: textfield; /* Entfernt Pfeile in Firefox */
+    background: linear-gradient(to bottom, #f0f8ff, #e6f7ff); /* Leichter Verlauf */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+input::placeholder {
+    color: #999;
+    opacity: 0.6;
+    text-align: center; /* Mittelt den Platzhalter-Text */
+}
+
+input:valid {
+    border-color: #28a745;
+}
+
+input:invalid {
+    border-color: #dc3545;
+}
+
+.uk-slideshow-items {
+    height: 100vh;
+}
+
+.winner{
+    margin-top: 100px;
+    text-align: center;
+
+    input.team-input {
+        height: 35px;
+        font-size: 16px;
+        text-align: center;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        outline: none;
+        margin: 5px;
+        font-weight: bold;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        -moz-appearance: textfield;
+        background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
+
+    }
+}
+
+.uk-position-top-left {
+    top: -10px !important;
+    left: -1% !important;
+    border-radius: 8px !important;
+    background: white !important;
+    z-index: 999;
+    height: 40px;
+    width: 40px;
+    @media (max-width: 768px) {
+        height: 30px;
+        width: 30px;
+        padding: 0 !important;
+        margin: 0 !important;
+        top: 18px !important;
+        line-height: 25px !important;
+        left: 1% !important;
+        text-align: center !important;
+    }
+}
+
+.uk-position-top-right{
+    top: -10px !important;
+    left: 4% !important;
+    border-radius: 8px !important;
+    background: white !important;
+    z-index: 999;
+    height: 40px;
+    width: 40px;
+    @media (max-width: 768px) {
+        height: 30px;
+        width: 30px;
+        padding: 0 !important;
+        margin: 0 !important;
+        top: 18px !important;
+        line-height: 25px !important;
+        left: 11% !important;
+        right: auto !important;
+        text-align: center !important;
+    }
+}
+
+::placeholder{
+    color: #333 !important;
+    opacity: 0.3 !important;
+    text-align: center; /* Mittelt den Platzhalter-Text */
+}
+
+input[name="currentMatchId"]{
+    position: absolute;
+    z-index: 99999;
+    left: 20%;
+    top: 5%;
+}
+
+.tm-header{
+    position: fixed;
+}

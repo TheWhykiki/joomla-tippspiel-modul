@@ -32,35 +32,11 @@
 
 	$user = Factory::getApplication()->getIdentity();
 	$hideSubmitButton = ($user->id == 69);
-    function isBeforeOrEqual($date) {
-        $givenDate = DateTime::createFromFormat('d-m-Y', $date);
-        $comparisonDate = DateTime::createFromFormat('d-m-Y', '13-06-2024');
 
-        if ($givenDate === false) {
-            // Datum konnte nicht geparst werden
-            return false;
-        }
-
-        return $givenDate < $comparisonDate;
-    }
-
-    $date = new DateTime('NOW', new DateTimeZone('UTC'));
-    $date = $date->format('d-m-Y');
-
-    if($user->id != 69) {
-	    if(isBeforeOrEqual($date)){
-	        $disabledClass = '';
-        }
-        else {
-            $disabledClass = 'disabled';
-        }
-    } else {
-        $disabledClass = '';
-    }
-
-
+    $disabledClass = '';
 ?>
 
+ababab
 <form id="tippspiel-form">
 	<div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slideshow>
 
